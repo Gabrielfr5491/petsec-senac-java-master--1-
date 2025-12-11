@@ -1,0 +1,258 @@
+/* =========================================================
+   FONTES E CONFIGURAÇÕES GLOBAIS
+   ========================================================= */
+
+.root {
+    -fx-font-family: "Segoe UI", "Inter", Arial;
+    -fx-font-size: 13px;
+    -fx-background-color: transparent;
+}
+
+/* =========================================================
+   VARIÁVEIS DE TEMA
+   ========================================================= */
+
+/* 🔵 TEMA AZUL */
+.tema-azul {
+    --p: #2563eb;
+    --s: #1e40af;
+    --d: #60a5fa;
+    --bg: #f8fafc;
+    --card: rgba(255,255,255,0.9);
+    --text: #0f172a;
+}
+
+/* 🟠 TEMA LARANJA */
+.tema-laranja {
+    --p: #f97316;
+    --s: #c2410c;
+    --d: #fdba74;
+    --bg: #fff7ed;
+    --card: rgba(255,255,255,0.9);
+    --text: #431407;
+}
+
+/* 🌙 TEMA ESCURO PREMIUM */
+.tema-dark {
+    --p: #38bdf8;
+    --s: #0ea5e9;
+    --d: #22d3ee;
+    --bg: #0f172a;
+    --card: rgba(30,41,59,0.85);
+    --text: #e5e7eb;
+}
+
+/* =========================================================
+   BACKGROUND PRINCIPAL
+   ========================================================= */
+
+.background {
+    -fx-background-color: linear-gradient(to bottom right, var(--bg), derive(var(--bg), -5%));
+}
+
+/* =========================================================
+   LOGIN CINEMATOGRÁFICO
+   ========================================================= */
+
+.login-bg {
+    -fx-background-color: linear-gradient(to bottom right, var(--p), var(--s));
+}
+
+.login-card {
+    -fx-background-color: var(--card);
+    -fx-background-radius: 22;
+    -fx-padding: 35;
+    -fx-spacing: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 35, 0, 0, 14);
+}
+
+.login-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: var(--p);
+}
+
+/* =========================================================
+   SIDEBAR MODERNA
+   ========================================================= */
+
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, var(--p), var(--s));
+    -fx-pref-width: 240;
+    -fx-padding: 16;
+    -fx-spacing: 6;
+}
+
+.menu-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 12 16;
+    -fx-background-radius: 14;
+    -fx-cursor: hand;
+}
+
+.menu-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.18);
+    -fx-translate-x: 4;
+}
+
+.menu-btn:pressed {
+    -fx-background-color: rgba(255,255,255,0.3);
+}
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+.title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: var(--p);
+}
+
+/* =========================================================
+   CARDS / GLASSMORPHISM
+   ========================================================= */
+
+.card {
+    -fx-background-color: var(--card);
+    -fx-background-radius: 20;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 24, 0, 0, 8);
+}
+
+/* =========================================================
+   BOTÕES PREMIUM
+   ========================================================= */
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, var(--p), var(--s));
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 16;
+    -fx-padding: 8 18;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.text-field,
+.password-field,
+.combo-box,
+.date-picker,
+.text-area {
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: #cbd5e1;
+    -fx-background-color: white;
+    -fx-padding: 6 10;
+}
+
+.tema-dark .text-field,
+.tema-dark .password-field,
+.tema-dark .combo-box,
+.tema-dark .text-area {
+    -fx-background-color: #020617;
+    -fx-text-fill: white;
+    -fx-border-color: #334155;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused,
+.text-area:focused {
+    -fx-border-width: 2;
+    -fx-border-color: var(--p);
+}
+
+/* =========================================================
+   TABELAS PROFISSIONAIS
+   ========================================================= */
+
+.table-view {
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: #e5e7eb;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: var(--p);
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(0,0,0,0.02);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: var(--d);
+    -fx-text-fill: black;
+}
+
+/* =========================================================
+   LIST VIEW
+   ========================================================= */
+
+.list-view {
+    -fx-background-radius: 14;
+}
+
+.list-cell:selected {
+    -fx-background-color: var(--d);
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: var(--p);
+    -fx-background-radius: 10;
+}
+
+/* =========================================================
+   ALERTAS
+   ========================================================= */
+
+.dialog-pane {
+    -fx-background-radius: 20;
+}
+
+.dialog-pane .button {
+    -fx-background-color: var(--p);
+}
+
+/* =========================================================
+   ÍCONES (Label com Emoji ou SVG)
+   ========================================================= */
+
+.icon {
+    -fx-font-size: 16px;
+}
+
+/* =========================================================
+   ANIMAÇÕES SUAVES
+   ========================================================= */
+
+* {
+    -fx-transition: all 0.25s ease-in-out;
+}
